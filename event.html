@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>Guessing game</title>
-	<script src="script.js"></script>
+	<style>
+
+		html {
+			font-family: fantasy;
+		}
+
+		body {
+			width: 50%;
+			max-width: 800px;
+			min-width: 400px;
+			margin: 0 auto;
+		}
+
+		.lastResult {
+			color: white;
+			padding: 3px;
+		}
+
+	</style>
 </head>
 <body>
-<h1>Guessing game</h1>
+<h1>Угадай число!</h1>
+<p>Компьютер загадал число от 1 до 100. У Вас есть 10 попыток, чтобы отгадать это число. Мы будем подсказывать Вам, выше/ниже ваше число от загаданного.</p>
+<div class="form">
+	<label for="guessField">Enter a guess: </label>
+	<input type="text" id="guessField" class="guessField">
+	<input type="submit" value="Submit guess" class="guessSubmit">
+</div>
+<div class="resultParas">
+	<p class="guesses"></p>
+	<p class="lastResult"></p>
+	<p class="lowOrHi"></p>
+</div>
+<script src="event.js">
+</script>
 </body>
 </html>
